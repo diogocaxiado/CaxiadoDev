@@ -1,0 +1,41 @@
+.main {
+  width: 95%;
+
+  margin: 0 auto;
+  padding: 2rem;
+  border: 1px solid var(--blue-500);
+
+  .photo {
+    width: 100%;
+    height: 100%;
+
+    margin: 0.8rem 0;
+  }
+
+  .name {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.4rem;
+  }
+
+  .stack {
+    font-size: 1.2rem;
+  }
+
+  .line {
+    margin: 1rem 0;
+    border: 1px solid var(--blue-500);
+  }
+
+  .description {
+    font-weight: 400;
+  }
+
+  .social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0.8rem 0;
+  }
+}

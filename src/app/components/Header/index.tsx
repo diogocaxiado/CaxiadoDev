@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 import styles from './index.module.scss'
 
-export function Header() {
+export const Header = () => {
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>{'< CAXIADO />'}</h1>
