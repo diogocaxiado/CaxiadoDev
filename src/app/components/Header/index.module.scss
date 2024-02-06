@@ -19,11 +19,61 @@
   }
 
   .hamburguer {
+    margin-bottom: 0.5rem;
+    cursor: pointer;
+    z-index: 2;
+
     font-family: var(--font-subtitle);
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 8px;
 
+    border: none;
+
+    background-color: transparent;
     color: var(--white-500);
+  }
+
+  .hamburguerClose {
+    margin: 0.5rem 0.5rem 0 0;
+    cursor: pointer;
+    z-index: 2;
+
+    font-family: var(--font-subtitle);
+    font-size: 3rem;
+    font-weight: 700;
+
+    border: none;
+
+    background-color: transparent;
+    color: var(--white-500);
+  }
+
+  .nav {
+    display: none;
+  }
+
+  @media(min-width: 1024px) {
+    .hamburguer {
+      display: none;
+    }
+
+    .hamburguerClose {
+      display: none;
+    }
+
+    .title {
+      font-size: 3rem;
+    }
+
+    .nav {
+      display: flex;
+      gap: 4rem;
+
+      a {
+        font-size: 2rem;
+        font-family: var(--font-title);
+        text-decoration: none;
+      }
+    }
   }
 }

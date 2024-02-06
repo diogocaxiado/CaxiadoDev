@@ -4,6 +4,17 @@
 
   font-family: var(--font-subtitle);
 
+  .menu {
+    position: absolute;
+    top: 0;
+    z-index: 1;
+
+    width: 100%;
+    height: 100vh;
+
+    background-color: #000000b0;
+  }
+
   .profile {
     margin: 1.4rem 0;
   }

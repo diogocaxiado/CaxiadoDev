@@ -7,7 +7,7 @@ import styles from './index.module.scss'
 
 export const Projects = () => {
   return (
-    <div className={styles.projects}>
+    <div className={styles.projects} id='projetos'>
       <h2 className={styles.title}>Projetos</h2>
 
       <section className={styles.cards}>

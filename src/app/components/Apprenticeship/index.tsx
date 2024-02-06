@@ -14,7 +14,7 @@ import styles from './index.module.scss'
 
 export const Apprenticeship = () => {
   return (
-    <div className={styles.main}>
+    <div className={styles.main} id='conhecimento'>
       <h2 className={styles.title}>Conhecimento</h2>
 
       <div className={styles.technologies}>
