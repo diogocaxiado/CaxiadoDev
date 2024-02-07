@@ -1,6 +1,6 @@
-import ImgValoreta from '../../../../public/projects/Valoreta.png'
-import ImgCubBank from '../../../../public/projects/CubBank.png'
-import ImgDinDin from '../../../../public/projects/DinDin.png'
+import ImgValoreta from '../../../public/projects/Valoreta.png'
+import ImgCubBank from '../../../public/projects/CubBank.png'
+import ImgDinDin from '../../../public/projects/DinDin.png'
 
 import { ProjectCard } from '../ProjectCard'
 import styles from './index.module.scss'
@@ -13,7 +13,7 @@ export const Projects = () => {
       <section className={styles.cards}>
         <ProjectCard
           image={ImgValoreta}
-          title='VALORETA'
+          title='Valoreta'
           description='Projeto de entretenimento para jogadores de Valorant, oferecendo sorteios para ajudar na escolha de personagens. O site, desenvolvido com React, Sass e a API do jogo, proporciona uma experiência interativa e envolvente com imagens e descrições detalhadas dos personagens.'
           tags='REACT - SASS - API'
           link='https://valoreta.vercel.app/'

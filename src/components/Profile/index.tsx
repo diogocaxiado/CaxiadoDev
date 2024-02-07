@@ -1,10 +1,10 @@
 import Image from 'next/image'
 
-import Character from '../../../../public/Character.png'
-import ImgWhatsaap from '../../../../public/social/whatsaap.svg'
-import ImgEmail from '../../../../public/social/email.svg'
-import ImgGithub from '../../../../public/social/github.svg'
-import ImgLinkedin from '../../../../public/social/linkedin.svg'
+import Character from '../../../public/Character.png'
+import ImgWhatsaap from '../../../public/social/whatsaap.svg'
+import ImgEmail from '../../../public/social/email.svg'
+import ImgGithub from '../../../public/social/github.svg'
+import ImgLinkedin from '../../../public/social/linkedin.svg'
 
 import { ImgCard } from '../ImgCard/index'
 import styles from './index.module.scss'

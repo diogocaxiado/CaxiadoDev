@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import Close from '../../../../public/Close.svg'
+import Close from '../../../public/Close.svg'
 
 import styles from './index.module.scss'
 

@@ -1,18 +1,23 @@
 "use client"
 
-import { Header } from './components/Header/index'
-import { Profile } from './components/Profile/index'
-import { Apprenticeship } from './components/Apprenticeship/index';
-import { Projects } from './components/Projects/index';
-import { Footer } from './components/Footer/index';
+import { Header } from '../components/Header/index'
+import { Profile } from '../components/Profile/index'
+import { Apprenticeship } from '../components/Apprenticeship/index';
+import { Projects } from '../components/Projects/index';
+import { Footer } from '../components/Footer/index';
 
 import { useState } from 'react';
 
 import styles from "./page.module.scss";
-import { Menu } from './components/Menu';
+import { Menu } from '../components/Menu';
+
+// interface IState {
+//   menu: boolean
+//   setMenu: React.Dispatch<React.SetStateAction<boolean>>
+// }
 
 export default function Home() {
-  const [menu, setMenu] = useState(false);
+  const [menu, setMenu] = useState<boolean>(false);
 
   const toggleMenu = (): void => {
     setMenu(!menu);
