@@ -34,3 +34,24 @@
     }
   }
 }
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: 4rem;
+
+    margin: 2rem;
+  }
+
+  .technologies {
+    width: 50%;
+    gap: 4rem;
+    margin-bottom: 3rem;
+
+    .card {
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+
+}

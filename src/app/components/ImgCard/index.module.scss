@@ -8,3 +8,16 @@
   padding: 0.6rem;
   border: 1px solid var(--blue-500);
 }
+
+@media (min-width: 1024px) {
+  .card {
+    width: fit-content;
+    height: fit-content;
+
+    .image {
+      margin: 0 auto;
+      width: 6rem;
+      height: 6rem;
+    }
+  }
+}

@@ -10,27 +10,32 @@ export interface PropsImgCard {
   };
   link?: string
   alt: string
+  width?: number
+  height?: number
+  rest?: any
 }
 
-export const ImgCard: React.FC<PropsImgCard> = ({ image, link, alt }) => {
+export const ImgCard: React.FC<PropsImgCard> = ({ image, link, alt, width, height, ...rest }) => {
   return (
     <div className={styles.card}>
       {link ?
         <Link href={link} target="_blank" className={styles.button}>
           <Image
             src={image.src}
-            width={image.width}
-            height={image.height}
+            width={width || image.width}
+            height={height || image.height}
             alt={alt}
-            className={styles.image}
+            className={width ? '' : styles.image}
+            {...rest}
           />
         </Link> :
         <Image
           src={image.src}
-          width={image.width}
-          height={image.height}
+          width={width || image.width}
+          height={height || image.height}
           alt={alt}
           className={styles.image}
+          {...rest}
         />}
     </div>
   );

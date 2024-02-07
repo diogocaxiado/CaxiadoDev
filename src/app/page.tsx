@@ -31,7 +31,9 @@ export default function Home() {
         <Profile />
       </div>
 
-      <Apprenticeship />
+      <div className={styles.apprenticeship}>
+        <Apprenticeship />
+      </div>
 
       <div className={styles.projects}>
         <Projects />

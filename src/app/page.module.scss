@@ -15,11 +15,15 @@
     background-color: #000000b0;
   }
 
-  .profile {
-    margin: 1.4rem 0;
-  }
-
   .projects {
-    margin: 1rem 0 2rem;
+    padding: 1rem 0 2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .main {
+    .projects {
+      padding: 1rem 0 4rem;
+    }
   }
 }

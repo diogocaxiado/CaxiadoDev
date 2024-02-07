@@ -63,7 +63,7 @@ export const Apprenticeship = () => {
             image={ImgNext}
             alt='imagem ilustrativa do NextJS'
           />
-          <span>Next</span>
+          <span>NextJS</span>
         </div>
 
         <div className={styles.card}>

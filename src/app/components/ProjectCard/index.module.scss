@@ -1,5 +1,6 @@
 .container {
   width: 95%;
+  height: fit-content;
   padding: 1rem;
   margin: 0 auto;
 
@@ -48,6 +49,30 @@
 
       background-color: var(--yellow-500);
       color: black;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    width: 28%;
+    height: fit-content;
+
+    .title {
+      font-size: 1.75rem;
+      margin: 1rem 0;
+    }
+
+    .bottom {
+      margin-top: 2rem;
+
+      .button {
+        width: 8rem;
+        transition: ease-in-out 400ms;
+
+        &:hover {
+          background-color: var(--blue-100);
+          color: var(--white-500);
+        }
+      }
     }
   }
 }
