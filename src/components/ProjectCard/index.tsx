@@ -33,6 +33,7 @@ export const ProjectCard: React.FC<PropsProjectCard> = ({ image, title, descript
         <span className={styles.tags}>{tags}</span>
         <Link
           href={link}
+          target="_blank"
           className={styles.button}>Visitar</Link>
       </div>
     </div>
