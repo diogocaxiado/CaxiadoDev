@@ -1,12 +1,9 @@
 import Image from 'next/image'
 
-import Character from '../../../public/Character.png'
-import ImgWhatsaap from '../../../public/social/whatsaap.svg'
-import ImgEmail from '../../../public/social/email.svg'
-import ImgGithub from '../../../public/social/github.svg'
-import ImgLinkedin from '../../../public/social/linkedin.svg'
+import Character from '/public/Character.png'
+import { ImgCard } from '@/components/ImgCard/page'
+import { social } from '@/data/info'
 
-import { ImgCard } from '../ImgCard/page'
 import styles from './page.module.css';
 
 export const Profile: React.FC = () => {
@@ -32,37 +29,19 @@ export const Profile: React.FC = () => {
         </p>
 
         <section className={styles.social}>
-          <ImgCard
-            image={ImgLinkedin}
-            link='https://www.linkedin.com/in/caxiado/'
-            alt='Linkedin'
-            width={56}
-            height={56}
-          />
-
-          <ImgCard
-            image={ImgGithub}
-            link='https://github.com/diogocaxiado'
-            alt='GitHub'
-            width={56}
-            height={56}
-          />
-
-          <ImgCard
-            image={ImgWhatsaap}
-            link='https://api.whatsapp.com/send/?phone=5513991250166&text=Ol%C3%A1%21+Eu+sou+o+Diogo.+Estou+aqui+para+colabora%C3%A7%C3%B5es+e+projetos.+Fique+%C3%A0+vontade+para+entrar+em+contato+pelo+WhatsApp.+Aguardo+sua+mensagem%21&type=phone_number&app_absent=0'
-            alt='Whatsaap'
-            width={56}
-            height={56}
-          />
-
-          <ImgCard
-            image={ImgEmail}
-            link='mailto:caxiadodev@gmail.com'
-            alt='Email'
-            width={56}
-            height={56}
-          />
+          {social.map((card, index) => {
+            return (
+              <ImgCard 
+                key={index}
+                image={card.image}
+                link={card.link}
+                alt={card.alt}
+                width={56}
+                height={56}
+              />
+            )
+          })}
+        
         </section>
       </div>
     </div>
