@@ -34,7 +34,7 @@ export const Profile: React.FC = () => {
         <section className={styles.social}>
           <ImgCard
             image={ImgLinkedin}
-            link='https://www.linkedin.com/in/caxiado/'
+            link='https://www.linkedin.com/in/diogocaxiado/'
             alt='Linkedin'
             width={56}
             height={56}
