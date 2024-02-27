@@ -7,15 +7,16 @@
   height: 6.75rem;
   padding: 0 1.25rem;
 
-  border-bottom: 1px solid var(--blue-100);
-  background-color: var(--blue-800);
+  border-bottom: 1px solid var(--border-blue);
+  background-color: var(--blue-primary);
+}
 
   .title {
-    font-family: var(--font-title);
+    font-family: var(--font-primary);
     font-size: 2.4rem;
     font-weight: 400;
 
-    color: var(--white-500);
+    color: var(--white);
   }
 
   .hamburguer {
@@ -23,14 +24,14 @@
     cursor: pointer;
     z-index: 2;
 
-    font-family: var(--font-subtitle);
+    font-family: var(--font-secondary);
     font-size: 3rem;
     font-weight: 700;
 
     border: none;
 
     background-color: transparent;
-    color: var(--white-500);
+    color: var(--white);
   }
 
   .hamburguerClose {
@@ -38,14 +39,14 @@
     cursor: pointer;
     z-index: 2;
 
-    font-family: var(--font-subtitle);
+    font-family: var(--font-secondary);
     font-size: 3rem;
     font-weight: 700;
 
     border: none;
 
     background-color: transparent;
-    color: var(--white-500);
+    color: var(--white);
   }
 
   .nav {
@@ -68,12 +69,11 @@
     .nav {
       display: flex;
       gap: 4rem;
+    }
 
-      a {
-        font-size: 2rem;
-        font-family: var(--font-title);
-        text-decoration: none;
-      }
+    .nav a {
+      font-size: 2rem;
+      font-family: var(--font-primary);
+      text-decoration: none;
     }
   }
-}

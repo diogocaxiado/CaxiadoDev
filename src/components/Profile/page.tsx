@@ -6,8 +6,8 @@ import ImgEmail from '../../../public/social/email.svg'
 import ImgGithub from '../../../public/social/github.svg'
 import ImgLinkedin from '../../../public/social/linkedin.svg'
 
-import { ImgCard } from '../ImgCard/index'
-import styles from './index.module.scss'
+import { ImgCard } from '../ImgCard/page'
+import styles from './page.module.css';
 
 export const Profile: React.FC = () => {
   return (

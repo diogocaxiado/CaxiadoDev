@@ -1,6 +1,7 @@
 import Image from 'next/image';
-import styles from './index.module.scss'
 import Link from 'next/link';
+
+import styles from './page.module.css'
 
 export interface PropsProjectCard {
   image: {

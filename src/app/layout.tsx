@@ -1,5 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.scss";
+
+import { Header } from "@/components/Header/page";
+import { Footer } from "@/components/Footer/page";
+
+import "@/styles/global.css";
 
 export const metadata: Metadata = {
   title: "Caxiado Dev",
@@ -13,7 +17,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <body>
+        <Header />
+          {children}
+        <Footer />
+      </body>
     </html>
   );
 }

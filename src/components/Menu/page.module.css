@@ -9,11 +9,11 @@
   right: 50%;
   top: 30%;
   bottom: 50%;
+}
 
-  a {
-    font-family: var(--font-title);
-    font-size: 3rem;
+.nav a {
+  font-family: var(--font-primary);
+  font-size: 3rem;
 
-    text-decoration: none;
-  }
+  text-decoration: none;
 }

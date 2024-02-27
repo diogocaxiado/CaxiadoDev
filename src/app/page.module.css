@@ -1,0 +1,29 @@
+.main {
+  width: 100%;
+  min-height: 100vh;
+
+  font-family: var(--font-subtitle);
+}
+
+.menu {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+
+  width: 100%;
+  height: 100vh;
+
+  background-color: #000000b0;
+}
+
+.projects {
+  padding: 1rem 0 2rem;
+}
+
+@media (min-width: 1024px) {
+   
+
+    .projects {
+      padding: 1rem 0 4rem;
+    }
+}

@@ -1,14 +1,14 @@
+'use client'
+
 import Image from 'next/image'
 import Close from '../../../public/Close.svg'
 
-import styles from './index.module.scss'
+import styles from './page.module.css'
+import useStatesContext from '@/hooks/useStatesContext'
 
-interface PropsHeader {
-  menu: boolean;
-  toggleMenu: () => void;
-}
-
-export const Header: React.FC<PropsHeader> = ({ menu, toggleMenu }) => {
+export const Header = () => {
+  const { menu, toggleMenu } = useStatesContext()
+  
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>{'< CAXIADO />'}</h1>

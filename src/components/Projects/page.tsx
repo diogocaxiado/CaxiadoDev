@@ -2,8 +2,8 @@ import ImgValoreta from '../../../public/projects/Valoreta.png'
 import ImgCubBank from '../../../public/projects/CubBank.png'
 import ImgDinDin from '../../../public/projects/DinDin.png'
 
-import { ProjectCard } from '../ProjectCard'
-import styles from './index.module.scss'
+import { ProjectCard } from '../ProjectCard/page'
+import styles from './page.module.css'
 
 export const Projects = () => {
   return (

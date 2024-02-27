@@ -9,9 +9,8 @@ import ImgNode from '../../../public/apprenticeship/node.svg'
 import ImgPostgres from '../../../public/apprenticeship/postgres.svg'
 import ImgDocker from '../../../public/apprenticeship/docker.svg'
 
-
-import { ImgCard } from '../ImgCard'
-import styles from './index.module.scss'
+import { ImgCard } from '../ImgCard/page'
+import styles from './page.module.css'
 
 export const Apprenticeship = () => {
   return (
