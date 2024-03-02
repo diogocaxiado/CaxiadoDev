@@ -1,3 +1,10 @@
+.black {
+  position: relative;
+  height: 100vh;
+
+  background: linear-gradient(to top, rgba(54, 121, 246, 0.05) 20%, rgba(9, 22, 137, 0.18) 60%);
+}
+
 .nav {
   display: flex;
   flex-direction: column;

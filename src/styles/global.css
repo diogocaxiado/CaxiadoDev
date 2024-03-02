@@ -30,3 +30,7 @@
 body {
   background-color: var(--bg-black-700);
 }
+
+.overflow-hidden {
+  overflow: hidden;
+}
