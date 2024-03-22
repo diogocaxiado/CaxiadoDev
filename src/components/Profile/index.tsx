@@ -49,14 +49,6 @@ export const Profile: React.FC = () => {
           />
 
           <ImgCard
-            image={ImgWhatsaap}
-            link='https://api.whatsapp.com/send/?phone=5513991250166&text=Ol%C3%A1%21+Eu+sou+o+Diogo.+Estou+aqui+para+colabora%C3%A7%C3%B5es+e+projetos.+Fique+%C3%A0+vontade+para+entrar+em+contato+pelo+WhatsApp.+Aguardo+sua+mensagem%21&type=phone_number&app_absent=0'
-            alt='Whatsaap'
-            width={56}
-            height={56}
-          />
-
-          <ImgCard
             image={ImgEmail}
             link='mailto:caxiadodev@gmail.com'
             alt='Email'
