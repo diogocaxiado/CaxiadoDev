@@ -1,27 +1,20 @@
-import Image from 'next/image';
 import Link from 'next/link';
 
-import styles from './page.module.css'
+import styles from './ProjectCard.module.css'
 
 export interface PropsProjectCard {
-  image: {
-    src: string
-    width: number
-    height: number
-  };
-  title: string
-  description: string
-  tags: string
-  link: string
+  image: string;
+  title: string;
+  description: string;
+  tags: string;
+  link: string;
 }
 
 export const ProjectCard: React.FC<PropsProjectCard> = ({ image, title, description, tags, link }) => {
   return (
     <div className={styles.container}>
-      <Image
-        src={image.src}
-        width={image.width}
-        height={image.height}
+      <img
+        src={image}
         alt="Imagem ilustrativa do projeto"
         className={styles.image}
       />

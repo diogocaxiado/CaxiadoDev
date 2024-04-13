@@ -4,9 +4,9 @@
 import close from '/public/close.svg'
 import hamburguer from '/public/hamburguer.svg'
 
-import styles from './page.module.css'
+import styles from './Header.module.css'
 
-import useStatesContext from '@/hooks/useStatesContext'
+import useStatesContext from '@/hooks/useDataContext'
 import Image from 'next/image'
 
 export const Header = () => {

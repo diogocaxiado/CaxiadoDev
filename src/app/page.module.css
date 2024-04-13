@@ -5,6 +5,14 @@
   font-family: var(--font-subtitle);
 }
 
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: calc(100vh - 12rem);
+}
+
 .menu {
   position: absolute;
   top: 0;

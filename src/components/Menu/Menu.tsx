@@ -1,6 +1,6 @@
 import { ReactElement } from 'react'
 
-import styles from './page.module.css'
+import styles from './Menu.module.css'
 
 interface PropsMenu {
   toggleMenu: () => void

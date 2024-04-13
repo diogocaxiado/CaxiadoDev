@@ -3,8 +3,8 @@
 import { useContext } from "react";
 import { context } from "../context/context";
 
-function useStatesContext() {
+function useDataContext() {
   return useContext(context);
 }
 
-export default useStatesContext;
+export default useDataContext;

@@ -1,20 +1,22 @@
-import { ImgCard } from '../ImgCard/page'
-import { languages } from '@/data/info'
+import useDataContext from '@/hooks/useDataContext'
+import { ImgCard } from '../ImgCard/ImgCard'
 
-import styles from './page.module.css'
+import styles from './Knowlodge.module.css'
 
-export const Apprenticeship = () => {
+export const Knowlodge = () => {
+  const { data } = useDataContext();
+
   return (
     <div className={styles.main} id='conhecimento'>
       <h2 className={styles.title}>Conhecimento</h2>
 
       <div className={styles.technologies}>
-        {languages.map((language, index) => {
+        {data?.knowlodge.map((language) => {
             return (
-              <div className={styles.card} key={index}>
+              <div className={styles.card} key={language.id}>
                 <ImgCard 
                   image={language.image}
-                  alt={language.alt}
+                  alt={language.name}
                 />
                 <span>{language.name}</span>
               </div>

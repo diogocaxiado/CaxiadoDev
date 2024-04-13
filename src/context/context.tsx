@@ -1,5 +1,6 @@
 'use client'
 
+import { Data } from "@/types/data";
 import { Dispatch, ReactNode, SetStateAction, createContext, useState } from "react";
 
 interface IContextProps {
@@ -8,6 +9,8 @@ interface IContextProps {
   toggleMenu (): void,
   openMenu: boolean,
   setOpenMenu: Dispatch<SetStateAction<boolean>>
+  data: Data | null,
+  setData: Dispatch<SetStateAction<Data | null>>
 }
 
 export const context = createContext({} as IContextProps);
@@ -15,6 +18,7 @@ export const context = createContext({} as IContextProps);
 function Context({ children }: { children: ReactNode }) {
     const [menu, setMenu] = useState<boolean>(false);
     const [openMenu, setOpenMenu] = useState<boolean>(false);
+    const [data, setData] = useState<Data | null>(null);
 
     const toggleMenu = (): void => {
       if (!menu) {
@@ -36,7 +40,9 @@ function Context({ children }: { children: ReactNode }) {
         setMenu,
         toggleMenu,
         openMenu,
-        setOpenMenu
+        setOpenMenu,
+        data,
+        setData,
       }}
     >
       {children}

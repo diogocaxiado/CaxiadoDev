@@ -1,24 +1,25 @@
-import { projects } from '@/data/info'
+import useDataContext from '@/hooks/useDataContext'
 
-import { ProjectCard } from '../ProjectCard/page'
+import { ProjectCard } from '../ProjectCard/ProjectCard'
 
-import styles from './page.module.css'
-
+import styles from './Project.module.css'
 
 export const Projects = () => {
+  const { data } = useDataContext();
+
   return (
     <div className={styles.projects} id='projetos'>
       <h2 className={styles.title}>Projetos</h2>
 
       <section className={styles.cards}>
-        {projects.map((project, index) => {
+        {data?.project.map((project) => {
           const formatTags = project.tags.join(' - ');
           
           return (
             <ProjectCard 
-              key={index}
+              key={project.id}
               image={project.image}
-              title={project.title}
+              title={project.name}
               description={project.description}
               tags={formatTags}
               link={project.link}
