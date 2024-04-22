@@ -1,6 +1,6 @@
 export interface Data {
     name: string;
-    stack: string;
+    stack: string[];
     description: string;
     avatar: string;
     socialMedia: { id: string, name: string; image: string; url: string }[];

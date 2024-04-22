@@ -21,6 +21,8 @@
 }
 
 .stack {
+  height: 3rem;
+  
   font-size: 1.2rem;
   font-weight: 500;
   font-family: var(--font-title);
