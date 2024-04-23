@@ -12,8 +12,7 @@
   --white: #FFFFFF;
   --yellow: #FAFF00;
 
-  --font-primary: 'Nova Square', sans-serif;
-  --font-secondary: 'Mulish', sans-serif;
+  --font-text: 'Nova Square', sans-serif;
 }
 
 * {
@@ -23,7 +22,6 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
  
-  font-family: var(--font-secondary);
   color: var(--white);
 }
 

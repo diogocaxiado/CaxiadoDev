@@ -1,4 +1,7 @@
 import type { Metadata } from "next";
+import { Mulish, Nova_Square } from 'next/font/google';
+
+const mulish = Mulish({subsets: ['latin']})
 
 import { Header } from "@/components/Header/Header";
 import { Footer } from "@/components/Footer/Footer";
@@ -20,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <Context>
-        <body>
+        <body className={mulish.className}>
           <Header />
             {children}
           <Footer />
