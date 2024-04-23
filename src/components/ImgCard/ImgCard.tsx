@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import styles from './ImgCard.module.css';
+import Image from 'next/image';
 
 export interface PropsImgCard {
   image: string;
@@ -11,15 +12,26 @@ export interface PropsImgCard {
   rest?: any
 }
 
-export const ImgCard: React.FC<PropsImgCard> = ({ image, link, alt, width, height, ...rest }) => {
+export const ImgCard = ({ image, link, alt, width, height, ...rest }: PropsImgCard) => {
   return (
     <div className={styles.card}>
       {link ? (
           <Link href={link} target="_blank" className={styles.button}>
-            <img src={image} alt={alt} />
+            <Image 
+              src={image} 
+              width={60} 
+              height={60} 
+              alt={alt} 
+            />
           </Link> 
         ) : (
-          <img src={image} alt={alt} className={styles.image} {...rest} />
+          <Image 
+            src={image} 
+            width={100} 
+            height={100} 
+            alt={alt} 
+            {...rest}  
+          />
         )
       }
     </div>

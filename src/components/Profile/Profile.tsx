@@ -19,7 +19,6 @@ export const Profile: React.FC = () => {
           src={data!.avatar}
           width={420}
           height={220}
-          loading='eager'
           alt='Foto de avatar'
           className={styles.photo}
         />
@@ -27,7 +26,7 @@ export const Profile: React.FC = () => {
 
       <div className={styles.info}>
         <h2 className={styles.name}>{data!.name}</h2>
-        <ReactTyped className={styles.stack} strings={data!.stack} typeSpeed={40} backSpeed={40} loop/>
+        <ReactTyped className={styles.stack} strings={data!.stack} typeSpeed={40} backSpeed={40} loop />
 
         <div className={styles.line}></div>
 

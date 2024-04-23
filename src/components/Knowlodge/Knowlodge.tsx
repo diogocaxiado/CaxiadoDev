@@ -11,7 +11,7 @@ export const Knowlodge = () => {
       <h2 className={styles.title}>Conhecimento</h2>
 
       <div className={styles.technologies}>
-        {data?.knowlodge.map((language) => {
+        {data!.knowlodge.map((language) => {
             return (
               <div className={styles.card} key={language.id}>
                 <ImgCard 

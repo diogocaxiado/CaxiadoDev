@@ -1,7 +1,7 @@
 "use client"
 
 import useStatesContext from '@/hooks/useDataContext';
-import React, { useEffect, useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import { Profile } from '@/components/Profile/Profile';
 import { Knowlodge } from '@/components/Knowlodge/Knowlodge';
@@ -32,10 +32,10 @@ export default function Home() {
         console.error(error);
       } 
     }
-
+    
     fetchData();
-  }, []);
-
+  }, [setData]);
+  
   return isLoading || !data ? (
     <section className={styles.loading}>
       <RotateLoader color='var(--yellow)' />

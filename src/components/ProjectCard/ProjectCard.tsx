@@ -1,6 +1,7 @@
 import Link from 'next/link';
 
 import styles from './ProjectCard.module.css'
+import Image from 'next/image';
 
 export interface PropsProjectCard {
   image: string;
@@ -10,11 +11,13 @@ export interface PropsProjectCard {
   link: string;
 }
 
-export const ProjectCard: React.FC<PropsProjectCard> = ({ image, title, description, tags, link }) => {
+export const ProjectCard = ({ image, title, description, tags, link }: PropsProjectCard) => {
   return (
     <div className={styles.container}>
-      <img
+      <Image
         src={image}
+        width={580}
+        height={285}
         alt="Imagem ilustrativa do projeto"
         className={styles.image}
       />
