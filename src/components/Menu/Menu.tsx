@@ -6,13 +6,13 @@ interface PropsMenu {
   toggleMenu: () => void
 }
 
-export const Menu: React.FC<PropsMenu> = ({ toggleMenu }): ReactElement<void> => {
+export const Menu: React.FC<PropsMenu> = () => {
   return (
     <div className={styles.black}>
       <nav className={styles.nav}>
-        <a href="#perfil" onClick={toggleMenu}>Perfil</a>
-        <a href="#conhecimento" onClick={toggleMenu}>Conhecimento</a>
-        <a href="#projetos" onClick={toggleMenu}>Projetos</a>
+        <a href="#perfil">Perfil</a>
+        <a href="#conhecimento">Conhecimento</a>
+        <a href="#projetos">Projetos</a>
       </nav>
     </div>
   )
