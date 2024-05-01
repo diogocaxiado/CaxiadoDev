@@ -6,6 +6,7 @@
   
   --bg-black-700: #201D1D;
   --bg-black-800: #151414;
+  --bg: #010E18;
   
   --border-blue: #6E7CFC;
 
@@ -21,12 +22,16 @@
 
   box-sizing: border-box;
   scroll-behavior: smooth;
- 
+
   color: var(--white);
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
-  background-color: var(--bg-black-700);
+  background-color: var(--bg);
 }
 
 .overflow-hidden {

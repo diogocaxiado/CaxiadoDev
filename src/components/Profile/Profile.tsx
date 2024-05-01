@@ -17,8 +17,8 @@ export const Profile: React.FC = () => {
       <div className={styles.profile}>
         <Image
           src={data!.avatar}
-          width={420}
-          height={220}
+          width={761}
+          height={761}
           alt='Foto de avatar'
           className={styles.photo}
         />

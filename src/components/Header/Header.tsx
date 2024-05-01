@@ -1,42 +1,42 @@
 'use client'
 
-// import { HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-icons'
-import close from '/public/close.svg'
-import hamburguer from '/public/hamburguer.svg'
-
 import styles from './Header.module.css';
-import animate from '../../animations/animate.module.css'
 
 import useStatesContext from '@/hooks/useDataContext'
-import Image from 'next/image'
-import { HamburgerMenuIcon, Cross1Icon } from '@radix-ui/react-icons'
+import {Close} from '@mui/icons-material';
+import MenuIcon from '@mui/icons-material/Menu'
 import { Menu } from '../Menu/Menu';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import { Modal } from '@mui/material';
 
 export const Header = () => {
-  const { menu, toggleMenu, openMenu } = useStatesContext()
-    
+  const { menu, setMenu } = useStatesContext();
+  const pathname = usePathname();
+
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>{'< CAXIADO />'}</h1>
-
-      {/* <Menu className={styles.teste}>
-        <a href="#perfil">Perfil</a>
-        <a href="#conhecimento">Conhecimento</a>
-        <a href="#projetos">Projetos</a>
-      </Menu> */}
       
       <button 
         type='button' 
         className={menu ? styles.hamburguerClose : styles.hamburguer} 
-        onClick={toggleMenu}
+        onClick={() => setMenu(!menu)}
       >
-        {menu ? <Image src={close} alt=''/> : <Image src={hamburguer} alt=''/>}
+        {menu ? <Close /> : <MenuIcon />}
       </button>
 
+      <Modal
+        open={menu}
+        onClose={() => setMenu(false)}
+      >
+        <Menu />
+      </Modal>
+
       <nav className={styles.nav}>
-        <a href="#perfil">Perfil</a>
-        <a href="#conhecimento">Conhecimento</a>
-        <a href="#projetos">Projetos</a>
+        <Link href="./profile" id={pathname === '/profile' ? styles.currentPathname : ''}>Perfil</Link>
+        <Link href="./knowlodge" id={pathname === '/knowlodge' ? styles.currentPathname : ''}>Conhecimento</Link>
+        <Link href="./projects" id={pathname === '/projects' ? styles.currentPathname : ''}>Projetos</Link>
       </nav>
     </header>
   )

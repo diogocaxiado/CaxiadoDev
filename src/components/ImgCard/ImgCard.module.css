@@ -1,21 +1,18 @@
 .card {
   display: flex;
+  justify-content: center;
   align-items: center;
 
-  width: 4.25rem;
-  height: 4.25rem;
+  width: 7rem;
+  height: 7rem;
 
-  padding: 0.6rem;
   border: 1px solid var(--blue-secondary);
 }
 
-.card a img {
-  width: 3rem;
-  height: 3rem;
-}
-
-.card img {
-  width: 3rem;
+.card .button img {
+  max-width: 5rem;
+  max-height: 5rem;
+  object-fit: cover;
 }
 
 @media (min-width: 768px) {

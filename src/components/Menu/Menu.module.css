@@ -2,7 +2,7 @@
   position: relative;
   height: 100vh;
 
-  background: linear-gradient(to top, rgba(54, 121, 246, 0.05) 20%, rgba(9, 22, 137, 0.18) 60%);
+  background: linear-gradient(to top, rgba(0, 1, 4, 0.65) 20%, rgba(9, 22, 137, 0.18) 60%);
 }
 
 .nav {
@@ -13,9 +13,9 @@
 
   position: absolute;
   left: 50%;
-  right: 50%;
-  top: 30%;
-  bottom: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
 }
 
 .nav a {
@@ -23,4 +23,8 @@
   font-size: 3rem;
 
   text-decoration: none;
+}
+
+#currentPathname {
+  color: var(--yellow);
 }

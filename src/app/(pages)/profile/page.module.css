@@ -1,0 +1,15 @@
+.main {
+  width: 100%;
+  min-height: 100vh;
+
+  font-family: var(--font-subtitle);
+  padding: 2rem;
+}
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: calc(100vh - 11rem);
+}

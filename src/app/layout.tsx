@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Mulish, Nova_Square } from 'next/font/google';
+import { Mulish } from 'next/font/google';
 
 const mulish = Mulish({subsets: ['latin']})
 
@@ -11,7 +11,7 @@ import Context from "@/context/context";
 import "@/styles/global.css";
 
 export const metadata: Metadata = {
-  title: "Caxiado Dev",
+  title: "Caxo Dev",
   description: "Portfólio de um desenvolvedor",
 };
 
