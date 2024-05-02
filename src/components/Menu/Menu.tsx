@@ -15,7 +15,7 @@ export const Menu = () => {
     <div className={styles.black}>
       <nav className={styles.nav}>
         <Link href="./profile" id={pathname === '/profile' ? styles.currentPathname : ''} onClick={handleClose}>Perfil</Link>
-        <Link href="./knowlodge" id={pathname === '/knowlodge' ? styles.currentPathname : ''} onClick={handleClose}>Conhecimento</Link>
+        <Link href="./knowlodges" id={pathname === '/knowlodges' ? styles.currentPathname : ''} onClick={handleClose}>Conhecimento</Link>
         <Link href="./projects" id={pathname === '/projects' ? styles.currentPathname : ''} onClick={handleClose}>Projetos</Link>
       </nav>
     </div>
