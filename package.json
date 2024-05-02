@@ -22,7 +22,8 @@
     "react-dom": "^18.2.0",
     "react-spinners": "^0.13.8",
     "react-typed": "^2.0.12",
-    "sass": "^1.70.0"
+    "sass": "^1.70.0",
+    "swiper": "^11.1.1"
   },
   "devDependencies": {
     "@types/node": "^20",

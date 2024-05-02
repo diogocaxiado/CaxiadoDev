@@ -37,3 +37,26 @@ body {
 .overflow-hidden {
   overflow: hidden;
 }
+
+.swiper {
+  padding-bottom: 4rem !important;
+}
+
+.swiper-pagination-bullet {
+  background: #ffffffc1 !important;
+  opacity: 1 !important;
+
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+@media(min-width: 1024px) {
+  .swiper-pagination-bullet {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--yellow) !important;
+}
