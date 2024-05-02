@@ -3,34 +3,32 @@ import Image from 'next/image';
 
 import styles from './Card.module.css';
 
-export interface PropsImgCard {
+export interface ICard {
   image: string;
   link?: string
   alt: string
-  width?: number
-  height?: number
-  rest?: any
 }
 
-export const Card = ({ image, link, alt, width, height, ...rest }: PropsImgCard) => {
+export const Card = ({ image, link, alt }: ICard) => {
   return (
-    <div className={styles.card}>
+    <div className={link ? styles.cardLink : styles.card}>
       {link ? (
-          <Link href={link} target="_blank" className={styles.button}>
+          <Link href={link} target="_blank">
             <Image 
               src={image} 
-              width={60} 
-              height={60} 
+              className={styles.imageLink}
+              width={50} 
+              height={50} 
               alt={alt} 
             />
           </Link> 
         ) : (
           <Image 
             src={image} 
-            width={100} 
-            height={100} 
+            className={styles.image}
+            width={80} 
+            height={80} 
             alt={alt} 
-            {...rest}  
           />
         )
       }
