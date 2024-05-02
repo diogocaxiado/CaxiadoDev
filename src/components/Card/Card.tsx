@@ -1,7 +1,7 @@
 import Link from 'next/link';
-
-import styles from './ImgCard.module.css';
 import Image from 'next/image';
+
+import styles from './Card.module.css';
 
 export interface PropsImgCard {
   image: string;
@@ -12,7 +12,7 @@ export interface PropsImgCard {
   rest?: any
 }
 
-export const ImgCard = ({ image, link, alt, width, height, ...rest }: PropsImgCard) => {
+export const Card = ({ image, link, alt, width, height, ...rest }: PropsImgCard) => {
   return (
     <div className={styles.card}>
       {link ? (

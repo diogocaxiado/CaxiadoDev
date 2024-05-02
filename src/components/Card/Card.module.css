@@ -15,34 +15,14 @@
   object-fit: cover;
 }
 
-@media (min-width: 768px) {
-  .card {
-    width: 5.2rem;
-    height: 5.25rem;
-  }
-
-  .card a img {
-    width: 4rem;
-    height: 4rem;
-  }
-  
-  .card img {
-    width: 4rem;
-  }
-}
-
 @media (min-width: 1024px) {
   .card {
-    width: 5.25rem;
-    height: 5.25rem;
+    width: 7rem;
+    height: 7rem;
   }
   
   .card a img {
-    width: 4rem;
-    height: 4rem;
-  }
-  
-  .card img {
-    width: 4rem;
+    width: 6rem;
+    height: 6rem;
   }
 }

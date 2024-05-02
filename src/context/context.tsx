@@ -10,7 +10,6 @@ import { Data } from "@/types/data";
 interface IContextProps {
   menu: boolean
   setMenu: Dispatch<SetStateAction<boolean>>
-  toggleMenu (): void,
   isLoading: boolean,
   setIsLoading: Dispatch<SetStateAction<boolean>>,
   data: Data | null,
@@ -23,17 +22,6 @@ function Context({ children }: { children: ReactNode }) {
     const [menu, setMenu] = useState<boolean>(false);
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [data, setData] = useState<Data | null>(null);
-
-    const toggleMenu = (): void => {
-      if (!menu) {
-        setMenu(true);
-        return
-      }
-
-      setTimeout(() => {
-        setMenu(false);
-      }, 250)
-    }
 
     const fetchData = async () => {
       try {
@@ -56,7 +44,6 @@ function Context({ children }: { children: ReactNode }) {
       {
         menu,
         setMenu,
-        toggleMenu,
         isLoading,
         setIsLoading,
         data,

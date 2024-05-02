@@ -35,7 +35,7 @@ export const Header = () => {
 
       <nav className={styles.nav}>
         <Link href="./profile" id={pathname === '/profile' ? styles.currentPathname : ''}>Perfil</Link>
-        <Link href="./knowlodge" id={pathname === '/knowlodge' ? styles.currentPathname : ''}>Conhecimento</Link>
+        <Link href="./knowlodges" id={pathname === '/knowlodges' ? styles.currentPathname : ''}>Conhecimentos</Link>
         <Link href="./projects" id={pathname === '/projects' ? styles.currentPathname : ''}>Projetos</Link>
       </nav>
     </header>
