@@ -26,4 +26,9 @@
     max-height: 7rem;
     object-fit: contain;
   }
+
+  .cardLink:hover {
+    text-shadow: 0 0 4px #FFFFFF;
+    box-shadow: 0 0 4px 1px #FFFFFF, 0 0 4px 1px #FFFFFF inset;
+  }
 }
