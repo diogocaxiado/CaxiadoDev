@@ -1,32 +1,38 @@
-import useDataContext from '@/hooks/useDataContext'
-
-import { ProjectCard } from '../ProjectCard/ProjectCard'
+import Link from 'next/link';
 
 import styles from './Project.module.css'
+import Image from 'next/image';
 
-export const Projects = () => {
-  const { data } = useDataContext();
+export interface PropsProjectCard {
+  image: string;
+  title: string;
+  description: string;
+  tags: string;
+  link: string;
+}
 
+export const Project = ({ image, title, description, tags, link }: PropsProjectCard) => {
   return (
-    <div className={styles.projects} id='projetos'>
-      <h2 className={styles.title}>Projetos</h2>
+    <div className={styles.container}>
+      <Image
+        src={image}
+        width={580}
+        height={285}
+        alt="Imagem ilustrativa do projeto"
+        className={styles.image}
+      />
 
-      <section className={styles.cards}>
-        {data?.project.map((project) => {
-          const formatTags = project.tags.join(' - ');
-          
-          return (
-            <ProjectCard 
-              key={project.id}
-              image={project.image}
-              title={project.name}
-              description={project.description}
-              tags={formatTags}
-              link={project.link}
-            />
-          );
-        })}
-      </section>
+      <h3 className={styles.title}>{title}</h3>
+
+      <p className={styles.description}>{description}</p>
+
+      <div className={styles.bottom}>
+        <span className={styles.tags}>{tags}</span>
+        <Link
+          href={link}
+          target="_blank"
+          className={styles.button}>Visitar</Link>
+      </div>
     </div>
   )
 }
