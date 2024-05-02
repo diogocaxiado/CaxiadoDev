@@ -9,7 +9,7 @@
   justify-content: center;
   align-items: center;
 
-  min-height: calc(100vh - 8rem);
+  min-height: calc(100vh - 15rem);
 }
 
 .avatar {
@@ -47,9 +47,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 2rem;
+  flex-wrap: wrap;
+  gap: 1.25rem;
 
-  margin: 4rem 0 3rem;
+  margin-top: 4rem;
 }
 
 @media (min-width: 1024px) {

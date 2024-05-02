@@ -33,10 +33,10 @@ export default function Home() {
         <div className={styles.border}>
           <div className={styles.profile}>
             <Image
-              src={data!.avatar}
+              src={data!.avatarProfile}
               width={761}
               height={761}
-              alt='Foto de avatar'
+              alt='Foto de um avatar de representação do desenvolvedor'
               className={styles.avatar}
             />
           </div>
@@ -45,7 +45,7 @@ export default function Home() {
             <h2 className={styles.name}>{data!.name}</h2>
             <ReactTyped className={styles.stack} strings={data!.stack} typeSpeed={40} backSpeed={40} loop />
 
-            <div className={styles.line}></div>
+            <div className={styles.line} />
 
             <p className={styles.description}>{data!.description}</p>
 
