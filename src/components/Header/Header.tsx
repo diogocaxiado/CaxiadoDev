@@ -7,16 +7,17 @@ import {Close} from '@mui/icons-material';
 import MenuIcon from '@mui/icons-material/Menu'
 import { Menu } from '../Menu/Menu';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 import { Modal } from '@mui/material';
 
 export const Header = () => {
   const { menu, setMenu } = useStatesContext();
+  const router = useRouter();
   const pathname = usePathname();
 
   return (
     <header className={styles.header}>
-      <h1 className={styles.title}>{'< CAXIADO />'}</h1>
+      <h1 className={styles.title} onClick={() => router.replace('/profile')}>{'< CAXIADO />'}</h1>
       
       <button 
         type='button' 

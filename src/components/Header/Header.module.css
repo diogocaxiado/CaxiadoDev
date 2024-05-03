@@ -53,16 +53,27 @@
 
   .title {
     font-size: 4.8rem;
+    cursor: pointer;
+  }
+
+  .title:hover {
+    text-shadow: 0 0 12px #FFFFFF;
+    box-shadow: 0 0 12px 1px #FFFFFF, inset;
   }
 
   .nav {
     display: flex;
-    gap: 8.9rem;
+    gap: 5rem;
   }
 
   .nav a {
     font-size: 2.8rem;
     font-family: var(--font-text);
     text-decoration: none;
+  }
+
+  .nav a:hover {
+    text-shadow: 0 0 12px #FFFFFF;
+    box-shadow: 0 0 12px 1px #FFFFFF, inset;
   }
 }
