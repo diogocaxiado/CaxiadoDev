@@ -21,7 +21,7 @@
   padding: 0;
 
   box-sizing: border-box;
-  scroll-behavior: smooth;
+  scroll-behavior: unset;
 
   color: var(--white);
 }
@@ -32,6 +32,8 @@ html {
 
 body {
   background-color: var(--bg);
+  max-width: 100vw;
+  min-height: 100vh;
 }
 
 .overflow-hidden {

@@ -129,6 +129,14 @@
   }
 
   .component {
-    width: 62vw;
+    min-width: 100%;
+    max-width: 80vw;
+    margin-top: 4rem;
+  }
+}
+
+@media (width: 1024px) {
+  .component {
+    max-width: 90vw;
   }
 }

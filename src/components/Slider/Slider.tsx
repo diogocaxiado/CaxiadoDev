@@ -20,12 +20,13 @@ export const Slider = () => {
     <Swiper 
       slidesPerView={isDesktop ? 2 : 1}
       slidesPerGroup={isDesktop ? 2 : 1}
-      spaceBetween={20}
+      spaceBetween={28}
       grabCursor={true}
       pagination={{
         clickable: true,
       }} 
       modules={[Pagination]} 
+      style={{overflow: 'hidden'}}
     >
       {data!.project.map((info) => {
          const formatTags = info.tags.join(' - ');
@@ -45,7 +46,7 @@ export const Slider = () => {
               <p className={styles.description}>{info.description}</p>
       
               <div className={styles.bottom}>
-                <span className={styles.tags}>{formatTags}</span>
+                {/* <span className={styles.tags}>{formatTags}</span> */}
                 <Link
                   href={info.link}
                   target="_blank"
