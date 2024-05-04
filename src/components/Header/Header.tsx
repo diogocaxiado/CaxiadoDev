@@ -17,7 +17,7 @@ export const Header = () => {
 
   return (
     <header className={styles.header}>
-      <h1 className={styles.title} onClick={() => router.replace('/profile')}>{'< CAXIADO />'}</h1>
+      <h1 className={styles.title} onClick={() => router.replace('/profile')}>{'<CAXIADO/>'}</h1>
       
       <button 
         type='button' 
