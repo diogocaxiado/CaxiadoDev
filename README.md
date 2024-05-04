@@ -12,7 +12,7 @@ O CaxiadoDev é um projeto concebido para promover meu perfil profissional como 
 
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Mock-API] (https://mockapi.io/projects)
+- [MockAPI](https://mockapi.io/projects)
 
 ## Contato
 
