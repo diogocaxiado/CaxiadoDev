@@ -8,11 +8,11 @@ O CaxiadoDev é um projeto concebido para promover meu perfil profissional como 
 - **Portfólio de Projetos:** Examine os projetos que realizei, com detalhes sobre cada um deles.
 - **Experiência de Usuário Intuitiva:** Com uma interface intuitiva e design atrativo, o projeto oferece uma maneira eficaz de compartilhar meu conhecimento e experiência com potenciais empregadores, colaboradores e clientes.
 
-## Tecnologias Utilizadas
+## Tecnologias Utilizadas 
 
 - [Next.js](https://nextjs.org/)
-- [Sass](https://sass-lang.com/)
 - [TypeScript](https://www.typescriptlang.org/)
+- [Mock-API] (https://mockapi.io/projects)
 
 ## Contato
 

@@ -1,0 +1,115 @@
+.slider {
+  width: 100%;
+  min-height: 30rem;
+  padding: 1rem;
+  border: 1px solid var(--blue-secondary);
+}
+
+.image {
+  width: 100%;
+  height: max-content;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  object-fit: cover;
+}
+
+.title {
+  font-family: var(--font-nova);
+  font-size: 1.8rem;
+  font-weight: 500;
+
+  margin-top: 1rem;
+  color: var(--yellow);
+}
+
+.description {
+  min-height: 12rem;
+
+  font-size: 1.4rem;
+  font-weight: 300;
+}
+
+.bottom {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.tags {
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: underline;
+
+  width: 60%;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 7rem;
+  height: 3rem;
+
+  font-size: 1.6rem;
+  font-weight: 600;
+  text-decoration: none;
+
+  background-color: var(--yellow);
+  color: black;
+}
+  
+@media (min-width: 1024px) {
+  .slider {
+    width: 100%;
+    min-width: 18rem;
+    min-height: 40rem;
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+  
+  .description {  
+    font-size: 1.8rem;
+    min-height: 14rem;
+    margin: 1rem 0;
+  }
+  
+  .tags {
+    font-size: 1.4rem;
+    width: 50%;
+  }
+  
+  .button {  
+    width: 12rem;
+    height: 4rem;
+    margin-top: auto;
+    
+    font-size: 2.2rem;
+    transition: all 400ms;
+  }
+
+  .button:hover {
+    text-shadow: 0 0 12px #FFFFFF;
+    box-shadow: 0 0 12px 1px #FFFFFF, 0 0 12px 1px #FFFFFF inset;
+  }
+}
+
+@media (width: 1024px) {
+  .slider {
+    width: 100%;
+    min-width: 24rem;
+    min-height: 42rem;
+  }
+
+  .bottom {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .description {
+    min-height: 10rem;
+  }
+}

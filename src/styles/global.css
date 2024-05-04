@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;600;700&family=Nova+Square&family=Offside&display=swap');
+
+:root {
+  --blue-primary: #091689;
+  --blue-secondary: #3678F6;
+  
+  --bg-black-700: #201D1D;
+  --bg-black-800: #151414;
+  --bg: #010E18;
+  
+  --border-blue: #6E7CFC;
+
+  --white: #FFFFFF;
+  --yellow: #FAFF00;
+
+  --font-nova: 'Nova Square', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  scroll-behavior: unset;
+
+  color: var(--white);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--bg);
+  max-width: 100vw;
+  min-height: 100vh;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.swiper {
+  padding-bottom: 4rem !important;
+}
+
+.swiper-pagination-bullet {
+  background: #ffffffc1 !important;
+  opacity: 1 !important;
+
+  width: 1rem !important;
+  height: 1rem !important;
+}
+
+@media(min-width: 1024px) {
+  .swiper-pagination-bullet {
+    width: 1.5rem !important;
+    height: 1.5rem !important;
+  }
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--yellow) !important;
+}

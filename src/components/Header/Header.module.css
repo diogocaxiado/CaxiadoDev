@@ -1,0 +1,78 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 100%;
+  height: 10rem;
+  padding: 0 2rem;
+
+  border-bottom: 1px solid var(--border-blue);
+  background-color: var(--blue-primary);
+}
+
+.title {
+  font-family: var(--font-nova);
+  font-size: 3.2rem;
+  font-weight: 400;
+
+  color: var(--white);
+}
+
+.hamburguer, .hamburguerClose {
+  cursor: pointer;
+  z-index: 1301;
+
+  border: none;
+
+  background-color: transparent;
+}
+
+.hamburguer svg, .hamburguerClose svg{
+  width: 5rem;
+  height: 5rem;
+}
+
+.nav {
+  display: none;
+}
+
+#currentPathname {
+  color: var(--yellow);
+}
+
+@media(min-width: 1024px) {
+  .header {
+    padding: 0 6rem;
+  }
+
+  .hamburguer, .hamburguerClose {
+    display: none;
+  }
+
+  .title {
+    font-size: 4.8rem;
+    cursor: pointer;
+  }
+
+  .title:hover {
+    text-shadow: 0 0 12px #FFFFFF;
+    box-shadow: 0 0 12px 1px #FFFFFF, inset;
+  }
+
+  .nav {
+    display: flex;
+    gap: 5rem;
+  }
+
+  .nav a {
+    font-size: 2.8rem;
+    font-family: var(--font-text);
+    text-decoration: none;
+  }
+
+  .nav a:hover {
+    text-shadow: 0 0 12px #FFFFFF;
+    box-shadow: 0 0 12px 1px #FFFFFF, inset;
+  }
+}

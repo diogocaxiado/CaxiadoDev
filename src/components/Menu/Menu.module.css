@@ -1,0 +1,30 @@
+.black {
+  position: relative;
+  height: 100vh;
+
+  background: linear-gradient(to top, rgba(0, 1, 4, 0.65) 20%, rgba(9, 22, 137, 0.18) 60%);
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.nav a {
+  font-family: var(--font-primary);
+  font-size: 3rem;
+
+  text-decoration: none;
+}
+
+#currentPathname {
+  color: var(--yellow);
+}

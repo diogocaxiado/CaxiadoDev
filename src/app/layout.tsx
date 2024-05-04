@@ -1,8 +1,17 @@
 import type { Metadata } from "next";
-import "./globals.scss";
+import { Mulish } from 'next/font/google';
+
+const mulish = Mulish({subsets: ['latin']})
+
+import { Header } from "@/components/Header/Header";
+import { Footer } from "@/components/Footer/Footer";
+
+import Context from "@/context/context";
+
+import "@/styles/global.css";
 
 export const metadata: Metadata = {
-  title: "Caxiado Dev",
+  title: "Caxo Dev",
   description: "Portfólio de um desenvolvedor",
 };
 
@@ -13,7 +22,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body>{children}</body>
+      <Context>
+        <body className={mulish.className}>
+          <Header />
+            {children}
+          <Footer />
+        </body>
+      </Context>
     </html>
   );
 }
