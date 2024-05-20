@@ -16,19 +16,19 @@
   object-fit: contain;
 }
 
+.cardLink:hover {
+  box-shadow: 0 0 24px 1px #FFFFFF, 0 0 1px 1px #FFFFFF inset;
+}
+
 @media(min-width: 1024px) {
   .card {
-    width: 9rem;
-    height: 9rem;
+    width: 8.4rem;
+    height: 8.4rem;
   }
   
   .image {
-    max-width: 7rem;
-    max-height: 7rem;
+    max-width: 6.4rem;
+    max-height: 6.4rem;
     object-fit: contain;
-  }
-
-  .cardLink:hover {
-    box-shadow: 0 0 24px 1px #FFFFFF, 0 0 1px 1px #FFFFFF inset;
   }
 }

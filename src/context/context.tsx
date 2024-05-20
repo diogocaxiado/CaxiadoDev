@@ -23,7 +23,7 @@ function Context({ children }: { children: ReactNode }) {
     const [isLoading, setIsLoading] = useState<boolean>(true);
     const [data, setData] = useState<Data | null>(null);
 
-    const fetchData = async () => {
+    async function fetchData() {
       try {
         const response: AxiosResponse<Data[]> = await api.get('/');
         setData(response.data[0]);
@@ -34,25 +34,27 @@ function Context({ children }: { children: ReactNode }) {
         setIsLoading(false);
       }
     }
-    
-    useEffect(() => {
-      fetchData();
-    }, [])
 
-  return (
-    <context.Provider value={
-      {
-        menu,
-        setMenu,
-        isLoading,
-        setIsLoading,
-        data,
-        setData,
-      }}
-    >
-      {children}
-    </context.Provider>
-  )
+    useEffect(() => {
+      if (isLoading) {
+        fetchData()
+      }
+    })
+
+    return (
+      <context.Provider value={
+        {
+          menu,
+          setMenu,
+          isLoading,
+          setIsLoading,
+          data,
+          setData
+        }}
+      >
+        {children}
+      </context.Provider>
+    )
 }
 
 export default Context;

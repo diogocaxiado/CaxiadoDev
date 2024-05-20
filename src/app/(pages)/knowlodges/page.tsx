@@ -1,40 +1,50 @@
 'use client'
 
-import useDataContext from '@/hooks/useDataContext';
+import { RotateLoader } from 'react-spinners';
+import { motion } from 'framer-motion';
 
+import Image from 'next/image';
 import { Card } from '@/components/Card/Card';
 
+import useDataContext from '@/hooks/useDataContext';
+
 import styles from './page.module.css';
-import Image from 'next/image';
-import { RotateLoader } from 'react-spinners';
+import Head from 'next/head';
 
 export default function Knowlodges() {
    const { data, isLoading } = useDataContext();
 
    return isLoading || !data ? (
       <>
-        <head>
+        <Head>
           <title>Loading...</title> 
-        </head>
+        </Head>
         <section className={styles.loading}>
           <RotateLoader color='var(--yellow)' />
         </section>
       </>
     ) : (
       <>
-         <head>
+         <Head>
             <title>Caxo Dev - Conhecimentos</title> 
             <meta property="og:title" content="My page title" key="title" />
-         </head>
+         </Head>
 
          <main className={styles.main}>
-            <div className={styles.border}>
+            <motion.div 
+               initial={false}
+               animate={{ opacity: 0, y: 50 }}
+               transition={{ duration: 2 }}
+               whileInView={{ opacity: 1, y: 0 }}
+               className={styles.border}
+            >
                <div className={styles.image}>
                   <Image
                      src={data!.avatarKnowlodges}
                      width={761}
                      height={761}
                      alt='Imagem de um avatar programando em seu computador'
+                     priority
                      className={styles.avatar}
                   />
                </div>
@@ -45,6 +55,7 @@ export default function Knowlodges() {
  
                   <div className={styles.line} />
 
+                
                   <div className={styles.technologies}>
                      {data!.knowlodge.map((language) => {
                         return (
@@ -59,7 +70,7 @@ export default function Knowlodges() {
                      })}
                   </div>
                </div>
-            </div>
+            </motion.div>
          </main>
       </>
    )
