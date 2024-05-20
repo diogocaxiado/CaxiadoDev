@@ -2,6 +2,7 @@
 
 import { RotateLoader } from 'react-spinners';
 import { ReactTyped } from 'react-typed';
+import { motion } from 'framer-motion';
 
 import Image from 'next/image';
 import { Card } from '@/components/Card/Card';
@@ -9,34 +10,42 @@ import { Card } from '@/components/Card/Card';
 import useStatesContext from '@/hooks/useDataContext';
 
 import styles from "./page.module.css";
+import Head from 'next/head';
 
 export default function Home() {
-  const {data, isLoading } = useStatesContext();
-  
+  const {data, isLoading} = useStatesContext();
+
   return isLoading || !data ? (
     <>
-      <head>
+      <Head>
         <title>Loading...</title> 
-      </head>
+      </Head>
       <section className={styles.loading}>
         <RotateLoader color='var(--yellow)' />
       </section>
     </>
   ) : (
     <>
-      <head>
+      <Head>
         <title>Caxo Dev - Perfil</title> 
         <meta property="og:title" content="My page title" key="title" />
-      </head>
+      </Head>
         
       <main className={styles.main}>
-        <div className={styles.border}>
+        <motion.div 
+          initial={false}
+          animate={{ opacity: 0, y: 50 }}
+          transition={{ duration: 2 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          className={styles.border}
+        >
           <div className={styles.profile}>
             <Image
               src={data!.avatarProfile}
               width={761}
               height={761}
               alt='Foto de um avatar de representação do desenvolvedor'
+              priority
               className={styles.avatar}
             />
           </div>
@@ -63,7 +72,7 @@ export default function Home() {
             
             </section>
           </div>
-        </div>
+        </motion.div>
       </main>
     </>
   );

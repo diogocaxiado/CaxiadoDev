@@ -29,8 +29,6 @@ export const Slider = () => {
       style={{overflow: 'hidden'}}
     >
       {data!.project.map((info) => {
-         const formatTags = info.tags.join(' - ');
-
         return (
           <SwiperSlide key={info.id} className={styles.slider}>
             <Image
@@ -46,7 +44,6 @@ export const Slider = () => {
               <p className={styles.description}>{info.description}</p>
       
               <div className={styles.bottom}>
-                {/* <span className={styles.tags}>{formatTags}</span> */}
                 <Link
                   href={info.link}
                   target="_blank"

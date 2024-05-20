@@ -2,7 +2,7 @@
   position: relative;
   height: 100vh;
 
-  background: linear-gradient(to top, rgba(0, 1, 4, 0.65) 20%, rgba(9, 22, 137, 0.18) 60%);
+  background: linear-gradient(to top, rgba(0, 1, 4, 0.75) 20%, rgb(9, 22, 137, 0.20) 60%);
 }
 
 .nav {
@@ -21,7 +21,8 @@
 .nav a {
   font-family: var(--font-primary);
   font-size: 3rem;
-
+  
+  text-shadow: 0 0 2px #FFFFFF;
   text-decoration: none;
 }
 
