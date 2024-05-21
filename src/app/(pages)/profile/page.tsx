@@ -10,31 +10,22 @@ import { Card } from '@/components/Card/Card';
 import useStatesContext from '@/hooks/useDataContext';
 
 import styles from "./page.module.css";
-import Head from 'next/head';
 
 export default function Home() {
   const {data, isLoading} = useStatesContext();
 
-  return isLoading || !data ? (
+  return isLoading ? (
     <>
-      <Head>
-        <title>Loading...</title> 
-      </Head>
       <section className={styles.loading}>
         <RotateLoader color='var(--yellow)' />
       </section>
     </>
   ) : (
     <>
-      <Head>
-        <title>Caxo Dev - Perfil</title> 
-        <meta property="og:title" content="My page title" key="title" />
-      </Head>
-        
       <main className={styles.main}>
         <motion.div 
-          initial={false}
           animate={{ opacity: 0, y: 50 }}
+          initial={false}
           transition={{ duration: 2 }}
           whileInView={{ opacity: 1, y: 0 }}
           className={styles.border}

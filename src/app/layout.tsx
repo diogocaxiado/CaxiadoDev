@@ -12,7 +12,9 @@ import "@/styles/global.css";
 
 export const metadata: Metadata = {
   title: "Caxo Dev",
-  description: "Portfólio de um desenvolvedor",
+  description: "Bem-vindo ao portfólio de Diogo Caxiado, desenvolvedor web. Explore meus projetos, habilidades e experiências em desenvolvimento front-end e back-end. Descubra como posso ajudar a transformar suas ideias em realidade com soluções web inovadoras e eficientes.",
+  keywords: 'Desenvolvedor, Front-end, Back-end, Full-Stack, HTML, CSS, JavaScript, React, TypeScript, Next.js, Node.js',
+  creator: 'Diogo Caxiado',
 };
 
 export default function RootLayout({

@@ -9,27 +9,18 @@ import Image from "next/image";
 import { Slider } from "@/components/Slider/Slider";
 
 import styles from './page.module.css';
-import Head from "next/head";
 
 export default function Projects() {
    const { data, isLoading } = useDataContext();
 
   return isLoading || !data ? (
       <>
-        <Head>
-          <title>Loading...</title> 
-        </Head>
         <section className={styles.loading}>
           <RotateLoader color='var(--yellow)' />
         </section>
       </>
     ) : (
       <>
-         <Head>
-            <title>Caxo Dev - Projetos</title> 
-            <meta property="og:title" content="My page title" key="title" />
-         </Head>
-     
          <main className={styles.main}>
             <motion.div 
                animate={{ opacity: 0, y: 50 }}

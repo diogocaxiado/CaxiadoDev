@@ -9,27 +9,18 @@ import { Card } from '@/components/Card/Card';
 import useDataContext from '@/hooks/useDataContext';
 
 import styles from './page.module.css';
-import Head from 'next/head';
 
 export default function Knowlodges() {
    const { data, isLoading } = useDataContext();
 
    return isLoading || !data ? (
       <>
-        <Head>
-          <title>Loading...</title> 
-        </Head>
         <section className={styles.loading}>
           <RotateLoader color='var(--yellow)' />
         </section>
       </>
     ) : (
       <>
-         <Head>
-            <title>Caxo Dev - Conhecimentos</title> 
-            <meta property="og:title" content="My page title" key="title" />
-         </Head>
-
          <main className={styles.main}>
             <motion.div 
                initial={false}
