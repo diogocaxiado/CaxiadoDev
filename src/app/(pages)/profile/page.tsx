@@ -14,6 +14,7 @@ import Head from 'next/head';
 
 export default function Home() {
   const {data, isLoading} = useStatesContext();
+  console.log(data)
 
   return isLoading || !data ? (
     <>

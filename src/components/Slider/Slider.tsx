@@ -50,7 +50,7 @@ export const Slider = () => {
                   className={styles.button}>Visitar</Link>
               </div>
             </div>
-        </SwiperSlide>
+          </SwiperSlide>
         )
       })}
     </Swiper>
